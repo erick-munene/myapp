@@ -1,0 +1,22 @@
+{% extends "layout2.html" %}
+{% from 'macros.html' import render_field %}
+
+{% block content %}
+<form method="POST" action="" class="form">
+    {{ form.hidden_tag() }}
+    {% for field in form %}
+        {{ render_field(field) }}
+    {% endfor %}
+    <button class="register" type="submit" id="submit">Have fun!</button>
+    <footer>
+
+          <div class="row">
+
+            <p>WeBeAppenin<br>by <a href="">mercury</a></p>
+
+          </div>
+
+        </footer>
+
+</form>
+{% endblock %}
